@@ -1,41 +1,11 @@
 "use client"
-import type { NextPage } from "next";
-import React, { useState } from "react";
-import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
-import MenuOverlay from "../components/MenuOverlay";
+import HeroSection from '../components/HeroSection';
 
-const Home: NextPage = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const handleMenuToggle = () => {
-    setMenuOpen((prev) => !prev);
-  };
-
+export default function Home() {
   return (
-    <>
-      {/* Navbar */}
-      <Navbar onMenuToggle={handleMenuToggle} />
-
-      {/* Menu Overlay */}
-      <MenuOverlay
-        isOpen={menuOpen}
-        onClose={() => setMenuOpen(false)}
-      />
-
-      {/* Hero Section */}
-      <Hero />
+    <main>
+      <HeroSection />
       
-      {/* You can add more sections below */}
-      <section className="p-8">
-        {/* Content for your landing page */}
-        <h2 className="text-2xl font-bold">Welcome to Ndara Studios</h2>
-        <p className="mt-2 text-gray-600">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </p>
-      </section>
-    </>
+    </main>
   );
-};
-
-export default Home;
+}
