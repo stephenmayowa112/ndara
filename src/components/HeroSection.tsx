@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-// Define the structure for each slide
+//the structure for each slide
 type SlideContent = {
   id: number;
   title: string;
@@ -24,37 +24,37 @@ const HeroSection = () => {
       id: 1,
       title: "Ndara Studios is a design studio based in London.",
       subtitle: "",
-      image: "/images/hero-1.jpg", // Replace with your actual image path
+      image: "/images/image_2.png", 
       alt: "Organic white architectural structure"
     },
     {
       id: 2,
       title: "We offer innovative digital content like Animations, Branding, Motion graphics, and more",
       subtitle: "to tell compelling brand stories.",
-      image: "/images/hero-2.jpg", // Replace with your actual image path
+      image: "/images/image_3.png", 
       alt: "3D animated character with fish"
     },
     {
       id: 3,
       title: "At Ndara Studios, we help brands find and tell their best stories.",
       subtitle: "",
-      image: "/images/hero-3.jpg", // Replace with your actual image path
+      image: "/images/image_4.png", 
       alt: "Electronic device with circuit board"
     },
     {
       id: 4,
       title: "We work for big & small non-stoppable visionaries.",
       subtitle: "",
-      image: "/images/hero-4.jpg", // Replace with your actual image path
+      image: "/images/image_5.png", 
       alt: "Modern abstract architecture"
     },
   ];
 
-  // Auto-rotate slides every 10 seconds
+  // Auto-rotate slides every 4 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveSlide((prevSlide) => (prevSlide + 1) % slides.length);
-    }, 10000);
+    }, 4000);
 
     return () => clearInterval(interval);
   }, [slides.length]);
