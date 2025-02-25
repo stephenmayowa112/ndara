@@ -24,19 +24,19 @@ const Projects: NextPage = () => {
     {
       id: 2,
       title: "Modern Cafe Design",
-      image: "/images/roof.png",
+      image: "/images/cafe.png",
       category: "Architectural Design"
     },
     {
       id: 3,
       title: "Electronic Device Mockup",
-      image: "/images/image_4",
+      image: "/images/image_4.png",
       category: "Product Design"
     },
     {
       id: 4,
       title: "Urban Architecture Concept",
-      image: "/images/projects/urban-architecture.jpg",
+      image: "/images/roof.png",
       category: "Architectural Design"
     },
     {
@@ -61,12 +61,12 @@ const Projects: NextPage = () => {
       </Head>
       <Layout>
         <div className="container mx-auto px-6 py-12">
-          <h1 className="text-4xl md:text-5xl text-[#43503F] font-medium mb-12">View our Projects</h1>
+          <h1 className="text-4xl md:text-5xl text-[#43503F] font-medium mt-10 mb-12">View our Projects</h1>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project) => (
-              <div key={project.id} className="group relative overflow-hidden rounded-lg cursor-pointer">
-                <div className="aspect-w-16 aspect-h-9 relative">
+              <div key={project.id} className="group relative overflow-hidden rounded-lg cursor-pointer h-[300px]">
+                <div className="relative w-full h-full overflow-hidden">
                   <Image 
                     src={project.image} 
                     alt={project.title}
