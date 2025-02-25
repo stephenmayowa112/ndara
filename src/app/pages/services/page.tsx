@@ -156,7 +156,7 @@ const ServicesPage = () => {
             <div
               key={service.id}
               className={`service-card flex flex-col md:flex-row items-center border-b border-gray-100 pb-4
-                ${index % 2 === 1 ? "md:flex-row-reverse" : ""}
+                ${index % 2 === 0 ? "md:flex-row-reverse" : ""}
               `}
             >
               {/* Service Image */}
