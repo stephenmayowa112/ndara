@@ -24,7 +24,7 @@ const AboutPage = () => {
               Our Clients
             </h2>
             <p className="text-lg text-[#43503F] max-w-3xl mb-6">
-              At NDARA STUDIOS, We're Proud To Have Worked With A Diverse Range Of Clients
+              At NDARA STUDIOS, We&apos;re Proud To Have Worked With A Diverse Range Of Clients
               Across Various Industries. Our Team Of Experts Is Dedicated To Creating Impactful
               Campaigns That Drive Results For Your Business.
             </p>

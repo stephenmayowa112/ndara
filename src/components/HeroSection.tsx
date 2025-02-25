@@ -220,7 +220,7 @@ const HeroSection = () => {
         }`}
       >
         <div className="flex flex-col items-center justify-center h-full text-white space-y-6 text-xl">
-          <Link href="#top" className="hover:text-gray-300 transition-colors">Home</Link>
+          {/* <Link href="#top" className="hover:text-gray-300 transition-colors">Home</Link> */}
           <Link href="/pages/waitlist" className="hover:text-gray-300 transition-colors">Wait-List</Link>
           <Link href="/pages/projects" className="hover:text-gray-300 transition-colors">Projects</Link>
           <Link href="/pages/services" className="hover:text-gray-300 transition-colors">Services</Link>
