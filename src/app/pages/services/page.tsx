@@ -37,21 +37,21 @@ const ServicesPage = () => {
       id: "2d-animation",
       title: "2D ANIMATION",
       description: "We'll help you create dynamic animations for advertising campaigns, logos, characters and more.",
-      image: "/images/2d-animation.png",
+      image: "/images/2d_animation.png",
       alt: "2D Animation example"
     },
     {
       id: "architectural-design",
       title: "ARCHITECTURAL DESIGN",
       description: "Visually communicate your architectural designs beautifully to tell your story with realistic relevant and aesthetically pleasing visuals.",
-      image: "/images/architectural-design.png",
+      image: "/images/archtectural_design.png",
       alt: "Architectural design example showing a building"
     },
     {
       id: "product-design",
       title: "PRODUCT DESIGN",
       description: "Do you want to bring those product to life online with high-quality 3D images that accurately display your product?",
-      image: "/images/product-design.png",
+      image: "/images/product_design.png",
       alt: "Product design example showing electronic device"
     },
     {
@@ -65,7 +65,7 @@ const ServicesPage = () => {
       id: "explainer-video",
       title: "EXPLAINER VIDEO",
       description: "Do you want to create short videos explaining your company's product or illustrate complex ideas?",
-      image: "/images/explainer-video.png",
+      image: "/images/explainer_vid.png",
       alt: "Explainer video thumbnails"
     }
   ];
@@ -120,7 +120,7 @@ const ServicesPage = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="px-8 md:px-16 py-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="px-8 md:px-16 py-8 grid grid-cols-2 md:grid-cols-2 gap-8">
           {services.map((service) => (
             <div key={service.id} className="service-card flex flex-col md:flex-row gap-4 mb-8">
               <div className="service-image w-full md:w-1/2 h-48 md:h-auto relative overflow-hidden rounded-lg">
@@ -135,8 +135,8 @@ const ServicesPage = () => {
                 <h3 className="text-[#43503F] text-xl font-bold mb-2">{service.title}</h3>
                 <p className="text-gray-700 mb-4">{service.description}</p>
                 <Link 
-                  href="/contact" 
-                  className="bg-[#43503F] text-white text-sm py-2 px-4 rounded inline-block w-max hover:bg-opacity-90 transition-colors"
+                  href="/pages/contact" 
+                  className="bg-white text-[#43503F] text-sm py-2 px-4 rounded inline-block w-max hover:bg-[#43503F]  transition-colors border border-[#43503F] hover:text-white"
                 >
                   CONTACT US NOW!
                 </Link>
