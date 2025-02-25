@@ -18,19 +18,19 @@ const Projects: NextPage = () => {
     {
       id: 1,
       title: "3D Character Animation",
-      image: "/images/projects/character-animation.jpg",
+      image: "/images/3d_animation.png",
       category: "3D Animation"
     },
     {
       id: 2,
       title: "Modern Cafe Design",
-      image: "/images/projects/cafe-design.jpg",
+      image: "/images/roof.png",
       category: "Architectural Design"
     },
     {
       id: 3,
       title: "Electronic Device Mockup",
-      image: "/images/projects/device-mockup.jpg",
+      image: "/images/image_4",
       category: "Product Design"
     },
     {
@@ -42,13 +42,13 @@ const Projects: NextPage = () => {
     {
       id: 5,
       title: "Avatar Characters Set",
-      image: "/images/projects/avatar-characters.jpg",
+      image: "/images/explainer_vid.png",
       category: "2D Animation"
     },
     {
       id: 6,
       title: "Debonairs Pizza Branding",
-      image: "/images/projects/pizza-branding.jpg",
+      image: "/images/pizza.png",
       category: "Branding"
     },
   ];
@@ -70,8 +70,8 @@ const Projects: NextPage = () => {
                   <Image 
                     src={project.image} 
                     alt={project.title}
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    style={{ objectFit: 'cover' }}
                     className="transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
