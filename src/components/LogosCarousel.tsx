@@ -11,7 +11,7 @@ const LogosCarousel = () => {
 
     let animationFrameId: number;
     let startTime: number | null = null;
-    const speed = 0.5; // pixels per millisecond
+    const speed = 0.2; // pixels per millisecond
     
     const animate = (timestamp: number) => {
       if (!startTime) startTime = timestamp;
@@ -39,9 +39,7 @@ const LogosCarousel = () => {
   return (
     <div className="w-full py-16 bg-white overflow-hidden">
       <div className="max-w-screen-xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-semibold text-center mb-10 text-gray-800">
-          Trusted by Leading Brands
-        </h2>
+        
         
         {/* Carousel container with 3/4 width */}
         <div className="relative w-3/4 mx-auto">
@@ -59,7 +57,7 @@ const LogosCarousel = () => {
               {/* NHS Logo */}
               <div className="flex items-center justify-center h-20 w-32">
                 <Image
-                  src="/images/logos/nhs-logo.svg"
+                  src="/images/NHS-logo.png"
                   alt="NHS"
                   width={100}
                   height={40}
@@ -70,7 +68,7 @@ const LogosCarousel = () => {
               {/* Red Circle Logo */}
               <div className="flex items-center justify-center h-20 w-24">
                 <Image
-                  src="/images/logos/red-circle-logo.svg"
+                  src="/images/curaboard.png"
                   alt="Company Logo"
                   width={60}
                   height={60}
@@ -81,7 +79,7 @@ const LogosCarousel = () => {
               {/* Debonairs Pizza Logo */}
               <div className="flex items-center justify-center h-20 w-32">
                 <Image
-                  src="/images/logos/debonairs-pizza-logo.svg"
+                  src="/images/debonair.png"
                   alt="Debonairs Pizza"
                   width={80}
                   height={60}
@@ -92,7 +90,7 @@ const LogosCarousel = () => {
               {/* Interlude Logo */}
               <div className="flex items-center justify-center h-20 w-32">
                 <Image
-                  src="/images/logos/interlude-logo.svg"
+                  src="/images/curaboard.png"
                   alt="Interlude"
                   width={80}
                   height={60}
@@ -103,7 +101,7 @@ const LogosCarousel = () => {
               {/* Findr Logo */}
               <div className="flex items-center justify-center h-20 w-32">
                 <Image
-                  src="/images/logos/findr-logo.svg"
+                  src="/images/Findr_logo.png"
                   alt="Findr"
                   width={80}
                   height={40}
@@ -117,7 +115,7 @@ const LogosCarousel = () => {
               {/* NHS Logo */}
               <div className="flex items-center justify-center h-20 w-32">
                 <Image
-                  src="/images/logos/nhs-logo.svg"
+                  src="/images/Findr_logo.png"
                   alt="NHS"
                   width={100}
                   height={40}
