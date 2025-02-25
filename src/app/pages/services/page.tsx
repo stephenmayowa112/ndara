@@ -305,7 +305,7 @@ const ServicesPage = () => {
         >
           <div className="flex flex-col items-center justify-center h-full text-white space-y-6 text-xl">
             <Link
-              href="/waitlist"
+              href="/pages/waitlist"
               className="hover:text-gray-300 transition-colors"
             >
               Wait-List
@@ -314,22 +314,22 @@ const ServicesPage = () => {
               Home
             </Link>
             <Link
-              href="/projects"
+              href="/pages/projects"
               className="hover:text-gray-300 transition-colors"
             >
               Projects
             </Link>
             <Link
-              href="/services"
+              href="/pages/services"
               className="hover:text-gray-300 transition-colors"
             >
               Services
             </Link>
-            <Link href="/about" className="hover:text-gray-300 transition-colors">
+            <Link href="/pages/about" className="hover:text-gray-300 transition-colors">
               About Us
             </Link>
             <Link
-              href="/contact"
+              href="/pages/contact"
               className="hover:text-gray-300 transition-colors"
             >
               Contact Us
