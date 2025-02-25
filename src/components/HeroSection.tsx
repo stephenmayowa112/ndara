@@ -17,6 +17,8 @@ const HeroSection = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   // State for menu open/closed
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // State to track scrolling
+  const [isScrolled, setIsScrolled] = useState(false);
 
   // Define the slide content
   const slides: SlideContent[] = [
@@ -63,6 +65,15 @@ const HeroSection = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+   // Listen for scroll to update the chat button color
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <div className="relative w-full min-h-screen bg-white overflow-hidden">
