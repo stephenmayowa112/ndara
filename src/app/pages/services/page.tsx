@@ -1,7 +1,7 @@
 // app/services/page.tsx
 'use client';
 
-import Layout from '@/components/Layout';
+import Layout from '../Layout';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -32,4 +32,6 @@ const ServicesPage = () => {
     },
     {
       title: "PRODUCT DESIGN",
-      description: "
+      description: "Transform your product ideas into reality with our professional design services.",
+      image: "/images/services/product_design.jpg"
+    },

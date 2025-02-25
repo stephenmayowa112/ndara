@@ -1,7 +1,7 @@
 // app/pages/about/page.tsx
 'use client';
 
-import Layout from '@/components/Layout';
+import Layout from '../Layout';
 
 const AboutPage = () => {
   return (
