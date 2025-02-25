@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-//the structure for each slide
+// the structure for each slide
 type SlideContent = {
   id: number;
   title: string;
@@ -26,28 +26,28 @@ const HeroSection = () => {
       id: 1,
       title: "Ndara Studios is a design studio based in London.",
       subtitle: "",
-      image: "/images/image_2.png", 
+      image: "/images/image_2.png",
       alt: "Organic white architectural structure"
     },
     {
       id: 2,
       title: "We offer innovative digital content like Animations, Branding, Motion graphics, and more",
       subtitle: "to tell compelling brand stories.",
-      image: "/images/image_3.png", 
+      image: "/images/image_3.png",
       alt: "3D animated character with fish"
     },
     {
       id: 3,
       title: "At Ndara Studios, we help brands find and tell their best stories.",
       subtitle: "",
-      image: "/images/image_4.png", 
+      image: "/images/image_4.png",
       alt: "Electronic device with circuit board"
     },
     {
       id: 4,
       title: "We work for big & small non-stoppable visionaries.",
       subtitle: "",
-      image: "/images/image_5.png", 
+      image: "/images/image_5.png",
       alt: "Modern abstract architecture"
     },
   ];
@@ -66,7 +66,7 @@ const HeroSection = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-   // Listen for scroll to update the chat button color
+  // Listen for scroll to update the chat button color
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
@@ -78,7 +78,7 @@ const HeroSection = () => {
   return (
     <div className="relative w-full min-h-screen bg-white overflow-hidden">
       {/* Logo and Menu Button */}
-       <div className="absolute top-0 left-0 w-full p-6 flex justify-between items-center z-50">
+      <div className="absolute top-0 left-0 w-full p-6 flex justify-between items-center z-50">
         {/* Logo */}
         <div className="flex items-center">
           <div className="mr-2">
@@ -117,7 +117,7 @@ const HeroSection = () => {
       {/* Main Hero Content */}
       <div className="flex flex-col md:flex-row h-screen pt-32 md:pt-0">
         {/* Text Content (Left Side) */}
-        <div className="w-full md:w-1/2 flex flex-col justify-center px-8 md:px-16 z-10">
+        <div className="w-full md:w-1/2 flex flex-col justify-center px-8 md:px-16 relative z-20">
           <h1 className="text-[#43503F] text-3xl md:text-4xl lg:text-5xl font-medium leading-tight mb-4">
             {slides[activeSlide].title}
           </h1>
@@ -137,13 +137,17 @@ const HeroSection = () => {
                 index === activeSlide ? "opacity-100" : "opacity-0"
               }`}
             >
-              <Image
-                src={slide.image}
-                alt={slide.alt}
-                layout="fill"
-                style={{ objectFit: 'contain' }}
-                priority={index === 0}
-              />
+              <div className="relative h-full w-full">
+                <Image
+                  src={slide.image}
+                  alt={slide.alt}
+                  layout="fill"
+                  style={{ objectFit: 'contain' }}
+                  priority={index === 0}
+                />
+                {/* White gradient overlay that fades from transparent to white on the right */}
+                <div className="absolute inset-0 pointer-events-none bg-gradient-to-l from-transparent to-white" />
+              </div>
             </div>
           ))}
         </div>
@@ -175,7 +179,7 @@ const HeroSection = () => {
         <Link href="#" aria-label="Twitter">
           <div className="text-[#43503F] hover:text-opacity-80">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+              <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.6  -2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
             </svg>
           </div>
         </Link>
