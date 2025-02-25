@@ -120,19 +120,20 @@ const ServicesPage = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="px-8 md:px-16 py-8 grid grid-cols-2 md:grid-cols-2 gap-8">
+        <div className="px-8 md:px-16 py-8 grid grid-cols-1  gap-12">
           {services.map((service) => (
-            <div key={service.id} className="service-card flex flex-col md:flex-row gap-4 mb-8">
-              <div className="service-image w-full md:w-1/2 h-48 md:h-auto relative overflow-hidden rounded-lg">
-                <Image
-                  src={service.image}
-                  alt={service.alt}
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </div>
+            <div key={service.id} className="service-card flex flex-col md:flex-row gap-8 mb-12">
+              <div className="service-image w-full md:w-1/2 relative overflow-hidden aspect-square">
+    <Image
+      src={service.image}
+      alt={service.alt}
+      fill
+      style={{ objectFit: 'contain', padding: '1rem' }}
+      className="bg-gray-50"
+    />
+  </div>
               <div className="service-content w-full md:w-1/2 flex flex-col justify-center">
-                <h3 className="text-[#43503F] text-xl font-bold mb-2">{service.title}</h3>
+                <h3 className="text-[#43503F] text-xl font-bold mb-4">{service.title}</h3>
                 <p className="text-gray-700 mb-4">{service.description}</p>
                 <Link 
                   href="/pages/contact" 
