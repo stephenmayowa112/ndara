@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Footer = () => {
   return (
     <footer className="bg-[#43503F] text-white">
-      <div className="max-w-screen-xl mx-auto px-6 py-12">
+      <div className="max-w-screen-xl mx-auto px-14 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Let's Work Together Section */}
           <div>
@@ -41,7 +41,7 @@ const Footer = () => {
       
       {/* Copyright Section */}
       <div className="border-t bg-white border-white/10">
-        <div className="max-w-screen-xl mx-auto px-6 py-6">
+        <div className="max-w-screen-xl mx-auto px-6 py-4">
           <p className="text-center text-[#43503F] text-sm">
             © 2025 NDARA STUDIOS LLC. All Rights Reserved.
           </p>
