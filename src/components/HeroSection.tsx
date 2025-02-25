@@ -67,7 +67,7 @@ const HeroSection = () => {
   return (
     <div className="relative w-full min-h-screen bg-white overflow-hidden">
       {/* Logo and Menu Button */}
-       <div className="absolute top-0 left-0 w-full p-6 flex justify-between items-center z-30">
+       <div className="absolute top-0 left-0 w-full p-6 flex justify-between items-center z-50">
         {/* Logo */}
         <div className="flex items-center">
           <div className="mr-2">
