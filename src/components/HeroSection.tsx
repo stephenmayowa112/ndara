@@ -67,18 +67,22 @@ const HeroSection = () => {
   return (
     <div className="relative w-full min-h-screen bg-white overflow-hidden">
       {/* Logo and Menu Button */}
-      <div className="absolute top-0 left-0 w-full p-6 flex justify-between items-center z-30">
+       <div className="absolute top-0 left-0 w-full p-6 flex justify-between items-center z-30">
         {/* Logo */}
         <div className="flex items-center">
           <div className="mr-2">
-            <svg width="35" height="20" viewBox="0 0 35 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 0H10L20 10L10 20H0L10 10L0 0Z" fill="#43503F"/>
-              <path d="M15 0H25L35 10L25 20H15L25 10L15 0Z" fill="#43503F"/>
-            </svg>
+            <Image 
+              src="/images/ndara_logo.png" 
+              alt="NDARA STUDIOS" 
+              width={300} 
+              height={120}
+            />
           </div>
-          <div className="text-[#43503F] text-lg font-medium tracking-wider">NDARA STUDIOS</div>
+          {/*
+          If you want to keep the textual representation somewhere (for SEO or fallback), you can uncomment:
+          <span className="sr-only">NDARA STUDIOS</span>
+          */}
         </div>
-        
         {/* Hamburger Menu Button */}
         <button 
           onClick={toggleMenu} 

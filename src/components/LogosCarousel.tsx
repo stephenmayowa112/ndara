@@ -128,7 +128,7 @@ const LogosCarousel = () => {
               {/* Red Circle Logo */}
               <div className="flex items-center justify-center h-20 w-24">
                 <Image
-                  src="/images/logos/red-circle-logo.svg"
+                  src="/images/curaboard-icon 1.png"
                   alt="Company Logo"
                   width={60}
                   height={60}
@@ -139,7 +139,7 @@ const LogosCarousel = () => {
               {/* Debonairs Pizza Logo */}
               <div className="flex items-center justify-center h-20 w-32">
                 <Image
-                  src="/images/logos/debonairs-pizza-logo.svg"
+                  src="/images/debonair.png"
                   alt="Debonairs Pizza"
                   width={80}
                   height={60}
@@ -150,7 +150,7 @@ const LogosCarousel = () => {
               {/* Interlude Logo */}
               <div className="flex items-center justify-center h-20 w-32">
                 <Image
-                  src="/images/logos/interlude-logo.svg"
+                  src="/images/interlude_logo.png"
                   alt="Interlude"
                   width={80}
                   height={60}
@@ -161,7 +161,7 @@ const LogosCarousel = () => {
               {/* Findr Logo */}
               <div className="flex items-center justify-center h-20 w-32">
                 <Image
-                  src="/images/logos/findr-logo.svg"
+                  src="/images/Findr_logo.png"
                   alt="Findr"
                   width={80}
                   height={40}
