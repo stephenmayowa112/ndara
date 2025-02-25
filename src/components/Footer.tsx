@@ -25,13 +25,13 @@ const Footer = () => {
           <div className="md:ml-auto">
             <h2 className="text-3xl font-semibold mb-6">Quick Links</h2>
             <nav className="flex flex-col space-y-4">
-              <Link href="/projects" className="text-white/90 hover:text-white">
+              <Link href="/pages/projects" className="text-white/90 hover:text-white">
                 Projects
               </Link>
-              <Link href="/services" className="text-white/90 hover:text-white">
+              <Link href="/pages/services" className="text-white/90 hover:text-white">
                 Services
               </Link>
-              <Link href="/about" className="text-white/90 hover:text-white">
+              <Link href="/pages/about" className="text-white/90 hover:text-white">
                 About Us
               </Link>
             </nav>
