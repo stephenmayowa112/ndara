@@ -61,7 +61,7 @@ const LogosCarousel = () => {
                   alt="NHS"
                   width={100}
                   height={40}
-                  objectFit="contain"
+                  style={{ objectFit: 'contain' }}
                 />
               </div>
               
@@ -72,7 +72,7 @@ const LogosCarousel = () => {
                   alt="Company Logo"
                   width={60}
                   height={60}
-                  objectFit="contain"
+                  style={{ objectFit: 'contain' }}
                 />
               </div>
               
@@ -83,7 +83,7 @@ const LogosCarousel = () => {
                   alt="Debonairs Pizza"
                   width={80}
                   height={60}
-                  objectFit="contain"
+                  style={{ objectFit: 'contain' }}
                 />
               </div>
               
@@ -94,7 +94,7 @@ const LogosCarousel = () => {
                   alt="Interlude"
                   width={80}
                   height={60}
-                  objectFit="contain"
+                  style={{ objectFit: 'contain' }}
                 />
               </div>
               
@@ -105,7 +105,7 @@ const LogosCarousel = () => {
                   alt="Findr"
                   width={80}
                   height={40}
-                  objectFit="contain"
+                  style={{ objectFit: 'contain' }}
                 />
               </div>
             </div>
@@ -119,7 +119,7 @@ const LogosCarousel = () => {
                   alt="NHS"
                   width={100}
                   height={40}
-                  objectFit="contain"
+                  style={{ objectFit: 'contain' }}
                 />
               </div>
               
@@ -130,7 +130,7 @@ const LogosCarousel = () => {
                   alt="Company Logo"
                   width={60}
                   height={60}
-                  objectFit="contain"
+                  style={{ objectFit: 'contain' }}
                 />
               </div>
               
@@ -141,7 +141,7 @@ const LogosCarousel = () => {
                   alt="Debonairs Pizza"
                   width={80}
                   height={60}
-                  objectFit="contain"
+                  style={{ objectFit: 'contain' }}
                 />
               </div>
               
@@ -152,7 +152,7 @@ const LogosCarousel = () => {
                   alt="Interlude"
                   width={80}
                   height={60}
-                  objectFit="contain"
+                  style={{ objectFit: 'contain' }}
                 />
               </div>
               
@@ -163,7 +163,7 @@ const LogosCarousel = () => {
                   alt="Findr"
                   width={80}
                   height={40}
-                  objectFit="contain"
+                  style={{ objectFit: 'contain' }}
                 />
               </div>
             </div>
