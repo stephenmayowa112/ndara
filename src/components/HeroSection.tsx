@@ -76,7 +76,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="relative w-full min-h-screen bg-white overflow-hidden">
+    <div id="top" className="relative w-full min-h-screen bg-white overflow-hidden">
       {/* Logo and Menu Button */}
       <div className="absolute top-0 left-0 w-full p-6 flex justify-between items-center z-50">
         {/* Logo */}
@@ -141,7 +141,7 @@ const HeroSection = () => {
                 <Image
                   src={slide.image}
                   alt={slide.alt}
-                  layout="fill"
+                  fill
                   style={{ objectFit: 'contain' }}
                   priority={index === 0}
                 />
@@ -220,12 +220,12 @@ const HeroSection = () => {
         }`}
       >
         <div className="flex flex-col items-center justify-center h-full text-white space-y-6 text-xl">
-          <Link href="#" className="hover:text-gray-300 transition-colors">Home</Link>
-          <Link href="#" className="hover:text-gray-300 transition-colors">Wait-List</Link>
+          <Link href="#top" className="hover:text-gray-300 transition-colors">Home</Link>
+          <Link href="/pages/waitlist" className="hover:text-gray-300 transition-colors">Wait-List</Link>
           <Link href="#" className="hover:text-gray-300 transition-colors">Projects</Link>
-          <Link href="#" className="hover:text-gray-300 transition-colors">Services</Link>
-          <Link href="#" className="hover:text-gray-300 transition-colors">About Us</Link>
-          <Link href="#" className="hover:text-gray-300 transition-colors">Contact Us</Link>
+          <Link href="/pages/services" className="hover:text-gray-300 transition-colors">Services</Link>
+          <Link href="/pages/about" className="hover:text-gray-300 transition-colors">About Us</Link>
+          <Link href="/pages/contact" className="hover:text-gray-300 transition-colors">Contact Us</Link>
         </div>
       </div>
     </div>
