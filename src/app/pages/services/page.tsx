@@ -30,7 +30,7 @@ const ServicesPage = () => {
       id: "3d-animation",
       title: "3D ANIMATION",
       description: "We provide 3D animation for movies, TV shows, commercials or games.",
-      image: "/images/3d-animation.png",
+      image: "/images/3d_animation.png",
       alt: "3D Animation example showing animated character"
     },
     {
