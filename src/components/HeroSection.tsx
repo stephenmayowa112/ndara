@@ -139,7 +139,7 @@ const HeroSection = () => {
       </div>
 
       {/* Social Media Icons */}
-      <div className="fixed right-6 top-1/2 transform -translate-y-1/2 flex flex-col gap-4 z-20">
+      <div className="absolute right-6 top-1/2 transform -translate-y-1/2 flex flex-col gap-4 z-20">
         <Link href="#" aria-label="Facebook">
           <div className="text-[#43503F] hover:text-opacity-80">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
