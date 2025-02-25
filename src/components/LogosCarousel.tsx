@@ -128,7 +128,7 @@ const LogosCarousel = () => {
               {/* Red Circle Logo */}
               <div className="flex items-center justify-center h-20 w-24">
                 <Image
-                  src="/images/curaboard-icon 1.png"
+                  src="/images/curaboard.png"
                   alt="Company Logo"
                   width={60}
                   height={60}
