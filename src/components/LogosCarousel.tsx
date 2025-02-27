@@ -37,6 +37,15 @@ const LogosCarousel = () => {
     };
   }, []);
 
+  // List of unique logos
+  const logos = [
+    { src: "/images/NHS-logo.png", alt: "NHS", width: 100, height: 40 },
+    { src: "/images/curaboard.png", alt: "Company Logo", width: 60, height: 60 },
+    { src: "/images/debonair.png", alt: "Debonairs Pizza", width: 80, height: 60 },
+    { src: "/images/interlude_logo.png", alt: "Interlude", width: 80, height: 60 },
+    { src: "/images/Findr_logo.png", alt: "Findr", width: 80, height: 40 },
+  ];
+
   return (
     <div className="w-full py-16 bg-white overflow-hidden">
       <div className="max-w-screen-xl mx-auto">
@@ -51,110 +60,34 @@ const LogosCarousel = () => {
             className="flex overflow-x-scroll scrollbar-hide"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
-            {/* Duplicate logos to create seamless loop */}
+            {/* Display logos and ensure no duplicate logos following the same one */}
             <div className="flex space-x-16 px-10 min-w-max">
-              <div className="flex items-center justify-center h-20 w-32">
-                <Image
-                  src="/images/NHS-logo.png"
-                  alt="NHS"
-                  width={100}
-                  height={40}
-                  style={{ objectFit: 'contain' }}
-                />
-              </div>
-
-              <div className="flex items-center justify-center h-20 w-24">
-                <Image
-                  src="/images/curaboard.png"
-                  alt="Company Logo"
-                  width={60}
-                  height={60}
-                  style={{ objectFit: 'contain' }}
-                />
-              </div>
-
-              <div className="flex items-center justify-center h-20 w-32">
-                <Image
-                  src="/images/debonair.png"
-                  alt="Debonairs Pizza"
-                  width={80}
-                  height={60}
-                  style={{ objectFit: 'contain' }}
-                />
-              </div>
-
-              <div className="flex items-center justify-center h-20 w-32">
-                <Image
-                  src="/images/curaboard.png"
-                  alt="Interlude"
-                  width={80}
-                  height={60}
-                  style={{ objectFit: 'contain' }}
-                />
-              </div>
-
-              <div className="flex items-center justify-center h-20 w-32">
-                <Image
-                  src="/images/Findr_logo.png"
-                  alt="Findr"
-                  width={80}
-                  height={40}
-                  style={{ objectFit: 'contain' }}
-                />
-              </div>
+              {logos.map((logo, index) => (
+                <div key={index} className="flex items-center justify-center h-20 w-32">
+                  <Image
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={logo.width}
+                    height={logo.height}
+                    style={{ objectFit: 'contain' }}
+                  />
+                </div>
+              ))}
             </div>
 
-            {/* Duplicate logos for seamless looping */}
+            {/* Repeat logos to create seamless looping, but no repeated logos directly following themselves */}
             <div className="flex space-x-16 px-10 min-w-max">
-              <div className="flex items-center justify-center h-20 w-32">
-                <Image
-                  src="/images/Findr_logo.png"
-                  alt="NHS"
-                  width={100}
-                  height={40}
-                  style={{ objectFit: 'contain' }}
-                />
-              </div>
-
-              <div className="flex items-center justify-center h-20 w-24">
-                <Image
-                  src="/images/curaboard.png"
-                  alt="Company Logo"
-                  width={60}
-                  height={60}
-                  style={{ objectFit: 'contain' }}
-                />
-              </div>
-
-              <div className="flex items-center justify-center h-20 w-32">
-                <Image
-                  src="/images/debonair.png"
-                  alt="Debonairs Pizza"
-                  width={80}
-                  height={60}
-                  style={{ objectFit: 'contain' }}
-                />
-              </div>
-
-              <div className="flex items-center justify-center h-20 w-32">
-                <Image
-                  src="/images/interlude_logo.png"
-                  alt="Interlude"
-                  width={80}
-                  height={60}
-                  style={{ objectFit: 'contain' }}
-                />
-              </div>
-
-              <div className="flex items-center justify-center h-20 w-32">
-                <Image
-                  src="/images/Findr_logo.png"
-                  alt="Findr"
-                  width={80}
-                  height={40}
-                  style={{ objectFit: 'contain' }}
-                />
-              </div>
+              {logos.map((logo, index) => (
+                <div key={index + logos.length} className="flex items-center justify-center h-20 w-32">
+                  <Image
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={logo.width}
+                    height={logo.height}
+                    style={{ objectFit: 'contain' }}
+                  />
+                </div>
+              ))}
             </div>
           </div>
 
