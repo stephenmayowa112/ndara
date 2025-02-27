@@ -1,11 +1,10 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 
 const LogosCarousel = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [isScrolling, setIsScrolling] = useState(false);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -14,7 +13,6 @@ const LogosCarousel = () => {
     let animationFrameId: number;
     let startTime: number | null = null;
     const speed = 0.1; // Pixels per millisecond
-    const smoothScrollInterval = 16; // ms (to update every frame)
 
     const animate = (timestamp: number) => {
       if (!startTime) startTime = timestamp;
@@ -60,7 +58,7 @@ const LogosCarousel = () => {
             className="flex overflow-x-scroll scrollbar-hide"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
-            {/* Display logos and ensure no duplicate logos following the same one */}
+            {/* Display logos */}
             <div className="flex space-x-16 px-10 min-w-max">
               {logos.map((logo, index) => (
                 <div key={index} className="flex items-center justify-center h-20 w-32">
@@ -75,7 +73,7 @@ const LogosCarousel = () => {
               ))}
             </div>
 
-            {/* Repeat logos to create seamless looping, but no repeated logos directly following themselves */}
+            {/* Repeat logos for seamless looping */}
             <div className="flex space-x-16 px-10 min-w-max">
               {logos.map((logo, index) => (
                 <div key={index + logos.length} className="flex items-center justify-center h-20 w-32">
