@@ -5,6 +5,7 @@ import emailjs from "emailjs-com";
 import Layout from '../Layout';
 
 const ContactPage = () => {
+  // State to handle form data
   const [formData, setFormData] = useState({
     fullName: '',
     brandName: '',
@@ -12,15 +13,24 @@ const ContactPage = () => {
     message: ''
   });
 
+  // States for loading, success/error message
+  const [loading, setLoading] = useState(false);
+  const [statusMessage, setStatusMessage] = useState<string | null>(null);
+
+  // Handle input field changes
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
+  // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    setLoading(true); // Start loading
+
     try {
+      // Send email via EmailJS
       const result = await emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
@@ -32,11 +42,15 @@ const ContactPage = () => {
         },
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
       );
+
       console.log('Email successfully sent!', result.text);
-      // Optionally, reset the form or display a success message
-      setFormData({ fullName: '', brandName: '', email: '', message: '' });
+      setStatusMessage('Thank you for contacting us. We got your message!');
+      setFormData({ fullName: '', brandName: '', email: '', message: '' }); // Reset form
     } catch (error: unknown) {
       console.error('Failed to send email:', error instanceof Error ? error.message : String(error));
+      setStatusMessage('Failed to send message. Please try again later.');
+    } finally {
+      setLoading(false); // End loading
     }
   };
 
@@ -109,11 +123,19 @@ const ContactPage = () => {
                 <button
                   type="submit"
                   className="px-10 py-2 bg-white text-[#43503F] font-bold rounded-md hover:bg-gray-100 transition-colors"
+                  disabled={loading} // Disable button while submitting
                 >
-                  SEND
+                  {loading ? "Sending..." : "SEND"}
                 </button>
               </div>
             </form>
+
+            {/* Display status message */}
+            {statusMessage && (
+              <div className={`mt-4 text-center font-semibold ${statusMessage.includes('success') ? 'text-green-600' : 'text-red-600'}`}>
+                {statusMessage}
+              </div>
+            )}
           </div>
         </div>
       </div>
