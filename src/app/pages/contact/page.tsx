@@ -1,8 +1,8 @@
-// app/pages/contact/page.tsx
 'use client';
 
+import { useState } from "react";
+import emailjs from "emailjs-com";
 import Layout from '../Layout';
-import { useState } from 'react';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -17,11 +17,27 @@ const ContactPage = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission - this would connect to your backend
-    console.log('Form submitted:', formData);
-    // Reset form or show success message
+
+    try {
+      const result = await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        {
+          fullName: formData.fullName,
+          brandName: formData.brandName,
+          email: formData.email,
+          message: formData.message,
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
+      console.log('Email successfully sent!', result.text);
+      // Optionally, reset the form or display a success message
+      setFormData({ fullName: '', brandName: '', email: '', message: '' });
+    } catch (error: unknown) {
+      console.error('Failed to send email:', error instanceof Error ? error.message : String(error));
+    }
   };
 
   return (
