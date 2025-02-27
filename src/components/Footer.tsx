@@ -14,7 +14,7 @@ const Footer = () => {
               working internationally. Please get in touch and one of our project
               managers will contact you about beginning the proposal process.
             </p>
-            <Link href="/contact">
+            <Link href="pages/contact">
               <span className="inline-block bg-white text-[#43503F] font-medium py-3 px-6 rounded-md hover:bg-white/90 transition-colors cursor-pointer">
                 Book a free Consultation
               </span>

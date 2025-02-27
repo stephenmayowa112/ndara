@@ -122,7 +122,7 @@ const ContactPage = () => {
               <div className="flex justify-center mt-10">
                 <button
                   type="submit"
-                  className="px-10 py-2 bg-white text-[#43503F] font-bold rounded-md hover:bg-gray-100 transition-colors"
+                  className="px-10 py-2 bg-white text-[#43503F] font-bold rounded-full hover:bg-gray-100 transition-colors"
                   disabled={loading} // Disable button while submitting
                 >
                   {loading ? "Sending..." : "SEND"}
@@ -132,7 +132,7 @@ const ContactPage = () => {
 
             {/* Display status message */}
             {statusMessage && (
-              <div className={`mt-4 text-center font-semibold ${statusMessage.includes('success') ? 'text-green-600' : 'text-red-600'}`}>
+              <div className={`mt-4 text-center font-semibold ${statusMessage.includes('Thank you') ? 'text-white' : 'text-red-600'}`}>
                 {statusMessage}
               </div>
             )}
