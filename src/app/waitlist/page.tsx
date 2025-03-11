@@ -1,7 +1,6 @@
-// app/waitlist/page.tsx
 'use client';
 
-import Layout from '../Layout';
+import Layout from '../../components/Layout';
 import { useState } from 'react';
 
 const WaitlistPage = () => {
